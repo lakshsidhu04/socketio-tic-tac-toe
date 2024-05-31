@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.loading {
+    display: none;
+}
+
+.loading h2 {
+    font-weight: 500;
+}
+
+.content {
+    display: none;
+}
+
+h2,
+h3 {
+    margin: 10px 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 20px auto;
+    max-width: 180px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+.reset {
+    margin-top: 20px;
+    background-color: #dc3545;
+}
+
+.reset:hover {
+    background-color: #c82333;
+}
+
+/* ... other styles ... */
+
+.loading {
+    display: none;
+}
+
+.content {
+    display: none;
+}
+
+/* Show the loading message when needed */
+.show-loading .loading {
+    display: block;
+}
+
+/* Hide the form when waiting for the second player */
+.hide-form .container form {
+    display: none;
+}
